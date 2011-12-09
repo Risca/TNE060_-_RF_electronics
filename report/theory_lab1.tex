@@ -1,5 +1,40 @@
 \documentclass[report.tex]{subfiles}
 \begin{document}
 \subsection{Theoretical background}
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+To get a picture of how well the simulations of a microstrip in ADS are were the parameters of a microstrip analyzed analytically to compare with. This was done by solving three basic problems.
+
+\subsubsection{Microstrip Parameters}\label{subsubsec: Microstrip_Parameters}
+The mictrostrip that was analyzed was defined in problem 2.13 in [TODO: Ref to text book.] as
+`It is desired to construct a 50 $\Omega$ microstrip line. The relative dielectric constant is 2.23 and the board height is h = 787 $\mu \text{m.}$ Find the width, wavelength and effective dielectric constant when the thickness of the copper trace is negligible. Assume an operating frequency of 1 GHz.'
+
+By using that $Z_{f} = \sqrt{\mu_{0} \epsilon_{0}} = 376.8 \Omega$ together with the formula for the effective dielectric constant;
+\begin{equation}
+	\epsilon_{eff} = \dfrac{\epsilon_{r} + 1}{2} + \dfrac{\epsilon_{r} - 1}{2} \left(1 + {\dfrac{12 h}{w}} \right)^{-1/2} \text ,
+\end{equation}
+the formula for characteristic impedance
+\begin{equation}
+	Z_0 = \dfrac{Z_f}{\sqrt{\epsilon_{eff}}\left(1.393 + \dfrac{w}{h} + \dfrac{2}{3} \text{ln}\left(\dfrac{w}{h} + 1.444 \right)\right)}
+\end{equation}
+where the width-height ratio is computed with
+\begin{equation}
+	\dfrac{w}{h} = \dfrac{2}{\pi}\left(B - 1 - \text{ln}\left(2B - 1 \right) + \dfrac{\epsilon_r - 1}{2 \epsilon_r}\left(\text{ln}\left(B -1\right) + 0.39 - \dfrac{0.61}{\epsilon_r}\right)\right)
+\end{equation}
+and where B is given by
+\begin{equation}
+\dfrac{Z_f \pi}{2Z_0\sqrt{\epsilon_r}}
+\end{equation}
+and the formula for wavelength
+\begin{equation}
+	\lambda = \dfrac{c}{f\sqrt{\epsilon_{eff}}}.
+\end{equation}
+This gives $w = 2.91 \text{mm}$, $\lambda = 229.51 \text{mm}$ and $\epsilon_{eff} = 1.71 \text{.}$
+\subsubsection{Transmissionline Phaseshift}
+When designing a microstrip that has a length that differs from the wavelength will a missmatch occur. So, what phaseshift will occur if the microstrip given in \ref{subsubsec: Microstrip_Parameters} has a length of 15 cm?
+
+Since the wavelength is longer that the microstrip length will the phaseshift be less than one period and therefore can the pasheshift be calculated as
+\begin{equation}
+	\text{ps} = \dfrac{l}{\lambda} 360 \:^\circ
+\end{equation}
+and this gives ps = 235.3 $^\circ$.
 \end{document}
+	

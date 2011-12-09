@@ -1,0 +1,42 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[swedish,english]{babel}
+%\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{subfiles}
+\usepackage{calc}
+\usepackage{graphicx}
+\DeclareGraphicsExtensions{.eps,.pdf,.png,.jpg}
+\graphicspath{{images/}}
+
+\title{RF Electronics}
+\foreignlanguage{swedish}{
+\author{
+        Patrik Dahlström \\
+        Electronic Design\\
+            \and
+        Daniel Josefsson\\
+        Electronic Design
+}
+}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Some abstract
+\end{abstract}
+
+\pagebreak
+
+\subfile{introduction}
+
+\subfile{theory.tex}
+
+\subfile{experiment_details.tex}
+
+\subfile{discussion_and_conclusion.tex}
+
+\end{document}

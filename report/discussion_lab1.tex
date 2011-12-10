@@ -1,5 +1,12 @@
 \documentclass[report.tex]{subfiles}
 \begin{document}
 \subsection{Discussion}
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\subsubsection{Microstrip Parameters}
+The results from the simulation given in \ref{table: Lab1 Simulated Microstrip parameters} only differs on decimals with its corresponding analytical values given in section \ref{subsubsec: Microstrip_Parameters}. The differences probably depends on more realistic and improved implementations of the parameter computation. The formulas used in Section \ref{subsubsec: Microstrip_Parameters} are a compromise between exactness and hand calculation easiness and the ADS implementations are probably not that easy to calculate by hand.
+\subsubsection{Signal Propagation Delay}
+The propagation speed calculated in Section \ref{subsubsec:Lab 1 Signal propagation delay} gives a speed that is very reasonable for signal transmission in a copper transmission line. With more data over a wider range of transmission line length should it be possible to get more resolution into the resulting formula.
+\subsubsection{Reflection Coefficient}
+The results given in Figure \ref{fig:Lab 1 Voltage recorded at the output.} in Section \ref{subsubsec:Lab1 ref coeff} are consistent with Table \ref{table: RC and SWR} in Section \ref{subsec:Lab1 RC and SWR}. One can see that when the load have a smaller resistance than the transmission line will destructive interference occur due to the phase shift between the inclining and declining wave. The opposite occurs when the load is larger than the transmission line and the inclining and the declining wave will sum up instead.
+\subsubsection{Transmission Line as Load}
+By using different lengths on transmission lines is it possible to implement every reactance value where one of the most applicable is the $\sfrac{\lambda}{4}$ transmission line. This can for example be used, as seen in Figure \ref{fig:Lab 1 Voltage recorded at the output.}b), to remove DC bias when connected to ground. This due the fact that the  $\sfrac{\lambda}{4}$ transmission line acts as an infinite inductance and will therefore only lead DC down to ground.
 \end{document}

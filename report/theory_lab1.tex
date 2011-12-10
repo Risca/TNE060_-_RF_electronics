@@ -47,7 +47,7 @@ Since the wavelength is longer that the microstrip length will the phase shift b
 	\text{ps} = \dfrac{l}{\lambda} 360 \:^\circ
 \end{equation}
 and this gives ps = 247.8 $^\circ$.
-\subsubsection{Reflection Coefficient and Standing Wave Ratio}
+\subsubsection{Reflection Coefficient and Standing Wave Ratio}\label{subsec:Lab1 RC and SWR}
 Two other properties of a microstrip are the reflection coefficient, $\Gamma_0$ and the (voltage) standing wave ratio, (V)SWR. These two parameters are computed with
 \begin{equation}
 	\Gamma_0 = \dfrac{Z_L - Z_0}{Z_L + Z_0}
@@ -57,14 +57,14 @@ and
 	SWR = \dfrac{1 + \left|\Gamma_0\right|}{1 - \left|\Gamma_0\right|}\text{.}
 \end{equation}
 Due to the fact that the characteristic impedance of the transmission line and the load have the same impedance $Z_0 = Z_L = 50\:\Omega$ is the circuit matched. This makes that all of the energy is transmitted to the load and no reflective wave will occur. This is also given by the value of reflection constant, $\Gamma_0 = 0\text{.}$ Since $\Gamma_0$ is zero is $SWR = 1$ and this is the ideal case and shows that the circuit is matched. Table \ref{table: RC and SWR} below shows the the reflection coefficient and standing wave ratio for some given loads.
-\begin{table}\label{table: RC and SWR}
+\begin{table}
     \centering
     \caption{$\Gamma_0$ and SWR for different loads when $Z_0= 50\: \Omega$.}
     \begin{tabular}{c | c c c c c}
          $Z_L [\Omega]$ & 0 & 25 & 50 & 100 & 1E6 \\
          $\Gamma_0$ & -1 & -$\sfrac{1}{3}$ & 0 & $\sfrac{1}{3}$ & 1 \\
          SWR & $\infty$ & 2 & 0 & 2 & $\infty$
-    \end{tabular}
+    \end{tabular}\label{table: RC and SWR}
 \end{table}
 Negative signs for $\Gamma_0$ values in Table \ref{table: RC and SWR} represents a 180 $^\circ$ phase shift for the reflected wave compared to the inclining.
 \end{document}

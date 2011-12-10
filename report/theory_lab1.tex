@@ -1,11 +1,12 @@
 \documentclass[report.tex]{subfiles}
 \begin{document}
 \subsection{Theoretical background}\label{sec: Lab1 Theoretical Background}
-To get a picture of how well the simulations of a microstrip in ADS are were the parameters of a microstrip analysed analytically to compare with. This was done by solving three basic problems.
+To get a picture of how well the simulations of a microstrip in ADS are, the parameters of a microstrip  were analysed analytically for comparison. This was done by solving three basic problems.
 
 \subsubsection{Microstrip Parameters}\label{subsubsec: Microstrip_Parameters}
-The microstrip that was analysed was defined in problem 2.13 in [TODO: Ref to text book.] as
-`It is desired to construct a 50 $\Omega$ microstrip line. The relative dielectric constant is 2.23 and the board height is h = 787 $\mu \text{m.}$ Find the width, wavelength and effective dielectric constant when the thickness of the copper trace is negligible. Assume an operating frequency of 1 GHz.'
+The microstrip that was analysed was defined in problem 2.13 in R. Ludwig:
+
+``It is desired to construct a 50 $\Omega$ microstrip line. The relative dielectric constant is 2.23 and the board height is h = 787 $\mu \text{m.}$ Find the width, wavelength and effective dielectric constant when the thickness of the copper trace is negligible. Assume an operating frequency of 1 GHz."
 
 \begin{table}[h]
     \centering
@@ -18,7 +19,7 @@ The microstrip that was analysed was defined in problem 2.13 in [TODO: Ref to te
     \label{table: Lab1 Microstrip parameters}
 \end{table}
 
-By using that $Z_{f} = \sqrt{\mu_{0} \epsilon_{0}} = 376.8\:\Omega$ together with the formula for the effective dielectric constant;
+By using $Z_{f} = \sqrt{\mu_{0} \epsilon_{0}} = 376.8\:\Omega$ together with the formula for the effective dielectric constant;
 \begin{equation}
 	\epsilon_{eff} = \dfrac{\epsilon_{r} + 1}{2} + \dfrac{\epsilon_{r} - 1}{2} \left(1 + {\dfrac{12 h}{w}} \right)^{-1/2} \text ,
 \end{equation}
@@ -38,11 +39,12 @@ and the formula for wavelength
 \begin{equation}
 	\lambda = \dfrac{c}{f\sqrt{\epsilon_{eff}}}.
 \end{equation}
-This gives $w = 2.4 \text{mm}$, $\lambda = 218 \text{mm}$ and $\epsilon_{eff} = 1.89 \text{.}$
-\subsubsection{Transmission Line Phase Shift}\label{subsubsec: Lab1 Phase Shift}
-When designing a microstrip that has a length that differs from the wavelength will a mismatch occur. So, what phase shift will occur if the microstrip given in \ref{subsubsec: Microstrip_Parameters} has a length of 15 cm?
+the sought parameters can be solved for. This gives $w = 2.4 \text{mm}$, $\lambda = 218 \text{mm}$ and $\epsilon_{eff} = 1.89 \text{.}$
 
-Since the wavelength is longer that the microstrip length will the phase shift be less than one period and therefore can the phase shift be calculated as
+\subsubsection{Transmission Line Phase Shift}\label{subsubsec: Lab1 Phase Shift}
+When designing a microstrip that has a length that differs from the wavelength a mismatch will occur. So, what phase shift will occur if the microstrip given in \ref{subsubsec: Microstrip_Parameters} has a length of 15 cm?
+
+Since the wavelength is longer that the microstrip the phase shift will be less than one period and therefore can the phase shift be calculated as
 \begin{equation}
 	\text{ps} = \dfrac{l}{\lambda} 360 \:^\circ
 \end{equation}
@@ -56,8 +58,10 @@ and
 \begin{equation}
 	SWR = \dfrac{1 + \left|\Gamma_0\right|}{1 - \left|\Gamma_0\right|}\text{.}
 \end{equation}
-Due to the fact that the characteristic impedance of the transmission line and the load have the same impedance $Z_0 = Z_L = 50\:\Omega$ is the circuit matched. This makes that all of the energy is transmitted to the load and no reflective wave will occur. This is also given by the value of reflection constant, $\Gamma_0 = 0\text{.}$ Since $\Gamma_0$ is zero is $SWR = 1$ and this is the ideal case and shows that the circuit is matched. Table \ref{table: RC and SWR} below shows the the reflection coefficient and standing wave ratio for some given loads.
-\begin{table}
+
+Due to the fact that the characteristic impedance of the transmission line and the load have the same impedance $Z_0 = Z_L = 50\:\Omega$ the circuit is matched. This means that all of the energy is transmitted to the load and no reflective wave will occur. This is also given by the value of the reflection constant, $\Gamma_0 = 0$. Since $\Gamma_0$ is zero, $SWR = 1$ and this is the ideal case and shows that the circuit is matched. Table~\ref{table: RC and SWR} below shows the reflection coefficient and standing wave ratio for some given loads.
+
+\begin{table}[h]
     \centering
     \caption{$\Gamma_0$ and SWR for different loads when $Z_0= 50\: \Omega$.}
     \begin{tabular}{c | c c c c c}
@@ -66,6 +70,7 @@ Due to the fact that the characteristic impedance of the transmission line and t
          SWR & $\infty$ & 2 & 0 & 2 & $\infty$
     \end{tabular}\label{table: RC and SWR}
 \end{table}
-Negative signs for $\Gamma_0$ values in Table \ref{table: RC and SWR} represents a 180 $^\circ$ phase shift for the reflected wave compared to the incident.
+
+Negative values for $\Gamma_0$ in Table \ref{table: RC and SWR} represents a 180 $^\circ$ phase shift for the reflected wave compared to the incident.
 \end{document}
 	

@@ -1,6 +1,37 @@
 \documentclass[report.tex]{subfiles}
 \begin{document}
+\clearpage
 \subsection{Results}
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\label{sec:lab2_results}
+The simulation results for chapter \ref{sec:lab2 methodology} is summarized below
+
+\begin{figure}[h]
+    \centering
+    \subfloat[Resistor]{
+        \includegraphics[scale=1.2]{S-params_50ohm_resistor}
+    }
+    \subfloat[Capacitor]{
+        \includegraphics[scale=1.2]{S-params_2pF_capacitor}
+    }
+    \subfloat[Inductor]{
+        \includegraphics[scale=1.2]{S-params_3nH_coil}
+    }
+    \caption{Simulation results of three basic components}
+\end{figure}
+\clearpage
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\linewidth]{S-params_unmatched_NPN}
+    \caption{S-parameters vs. frequency of unmatched NPN transistor}
+\end{figure}
+\clearpage
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\linewidth]{S-params_matched_NPN}
+    \caption{S-parameters vs. frequency of impedance matched NPN transistor}
+\end{figure}
+\clearpage
 
 \end{document}

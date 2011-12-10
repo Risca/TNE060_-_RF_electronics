@@ -1,6 +1,23 @@
 \documentclass[report.tex]{subfiles}
 \begin{document}
 \subsection{Theoretical background}
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+When designing a pass- or stop-band filter, a low-pass filter is used as basis and then frequency shifted and impedance transformed. 
+
+Theoretically designing a maximally flat 2\nd order lumped component band-pass filter using the parameters in table~\ref{table:filter specs} is done by first designing a low-pass filter with cut-off frequency equal to the desired center frequency ($\omega_c=\omega_0$). The center frequency is calculated from eq.~\ref{eqn:center frequency}.
+
+\begin{equation}
+    \omega_0 = \sqrt{\omega_U \cdot \omega_L} \approx 2.44~GHz
+    \label{eqn:center frequency}
+\end{equation}
+
+A flat 2\nd order low-pass filter have the following filter constants (from table 5-2 in R. Ludwig).
+
+\begin{equation*}
+    g_0=g_3=1, g_1=g_2=1.4142
+\end{equation*}
+
+This low-pass filter can be realized with a series inductor and a shunt capacitor, both with a normalized value of $g_1~F$ and $g_2~H$ respectively. To convert this low-pass filter to a band-pass filter, Table 5-5 in R. Ludwig is considered. A series capacitor is appended to a series inductor, and a shunt capacitor is connected to an inductor in parallel.
+
+
 
 \end{document}

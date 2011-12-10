@@ -1,6 +1,74 @@
 \documentclass[report.tex]{subfiles}
 \begin{document}
 \subsection{Results}
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+This section displays the results of the experiments described in section \ref{sec:Lab1 methodology}.
+
+\subsubsection{Microstrip Parameters}
+The result of this experiment is given in Table \ref{table: Lab1 Simulated Microstrip parameters}.
+
+\begin{table}[H]
+    \centering
+    \caption{Simulated microstrip parameters.\label{table: Lab1 Simulated Microstrip parameters}}
+    \begin{tabular}{c | c | c | c}
+        $w [\text{mm}]$ & $l [\text{mm}]$ & $\epsilon_{eff}$ & $\lambda [\text{mm}]$\\
+        \hline
+		2.38 & 149.83 & 1.89 & 217.7
+    \end{tabular}
+    \label{table: Lab1 Simulated Microstrip parameters}
+\end{table}
+
+\subsubsection{Signal Propagation Delay}
+\begin{figure}
+	\includegraphics[scale=0.9]{propagation_speed}
+	\caption{Propagation speed}\label{fig:Lab1 propagation speed}
+\end{figure}
+
+The propagation speed given in Figure \ref{fig:Lab1 propagation speed} corresponds to 65 \% of the light velocity and the resulting formula for the singal propagation delay, rewritten from \ref{eq: Lab1 propagation delay}, is given as
+\begin{equation}
+	\Delta t_p = \dfrac{100}{65 c}l.
+\end{equation}
+
+\subsubsection{Reflection Coefficient}
+
+\begin{figure}[H]
+	\begin{tabular}{cc}
+    	\subfloat[$0\:\Omega$]{
+        	\includegraphics[scale=0.65]{0Ohm}
+	    }
+	&
+    \subfloat[$25\:\Omega$]{
+        \includegraphics[scale=0.65]{25Ohm}
+    }
+    \\
+        \subfloat[$100\:\Omega$]{
+        \includegraphics[scale=0.65]{100Ohm}
+    }&
+    \subfloat[$1\:\text{M}\Omega$]{
+        \includegraphics[scale=0.65]{1000000}
+    }
+	\end{tabular}
+	\caption{Voltage recorded at the output of reflection coefficient }
+	\label{fig:Lab 1 Voltage recorded at the output of reflection coefficient experiment.}
+\end{figure}
+
+The red lines in Figure \ref{fig:Lab 1 Voltage recorded at the output.} shows the inclining wave and the blue lines depicts the voltage recorded at the output.
+
+\subsubsection{Transmission Line as Load}
+Following figure shows how the output response depends on the termination.
+
+\begin{figure}[H]
+	\centering
+	\subfloat[$\lambda$]{
+        \includegraphics[scale=1]{lambda}
+	}
+	\subfloat[$\sfrac{\lambda}{4}$]{
+    	\includegraphics[scale=1]{lambda_4}
+    }
+    \subfloat[$\sfrac{\lambda}{8}$]{
+        \includegraphics[scale=1]{lambda_8}
+    }
+	\caption{Pulse response with different transmission line terminations.}
+	\label{fig:Lab 1 Pulse responses.}
+\end{figure}
 
 \end{document}

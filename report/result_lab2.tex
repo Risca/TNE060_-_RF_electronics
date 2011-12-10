@@ -20,11 +20,20 @@ The simulation results for chapter \ref{sec:lab2 methodology} is summarized belo
 \end{figure}
 \clearpage
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.8\linewidth]{S-params_unmatched_NPN}
-    \caption{S-parameters vs. frequency of unmatched NPN transistor}
-\end{figure}
+%\begin{figure}
+%    \centering
+%    \includegraphics[width=0.8\linewidth]{S-params_unmatched_NPN}
+%    \caption{S-parameters vs. frequency of unmatched NPN transistor}
+%\end{figure}
+%\begin{table}
+%    \centering
+%    \caption{Summare of input and output parameters}
+%    \begin{tabular}{l l l}
+%        $Z_{in} [\Omega]$ & $Z_{out} [\Omega]$ & $S_{21} [dB]$\\
+%        \hline
+%        $455-j227$  & $308-j176$  & 19.5 \\
+%    \end{tabular}
+%\end{table}
 \clearpage
 
 \begin{figure}
@@ -32,6 +41,18 @@ The simulation results for chapter \ref{sec:lab2 methodology} is summarized belo
     \includegraphics[width=0.8\linewidth]{S-params_matched_NPN}
     \caption{S-parameters vs. frequency of impedance matched NPN transistor}
 \end{figure}
+
+\begin{table}
+    \centering
+    \caption{Summary of input and output parameters}
+    \begin{tabular}{l | l l l}
+        & $Z_{in} [\Omega]$ & $Z_{out} [\Omega]$ & $S_{21} [dB]$\\
+        \hline
+        Un-matched & $455-j227$  & $308-j176$  & 19.5 \\
+        Matched    & $50.5+j0.2$ & $50.0+j0.3$ & 28.8 \\
+    \end{tabular}
+\end{table}
+
 \clearpage
 
 \end{document}

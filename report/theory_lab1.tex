@@ -1,13 +1,23 @@
 \documentclass[report.tex]{subfiles}
 \begin{document}
-\subsection{Theoretical background}
+\subsection{Theoretical background}\label{sec: Lab1 Theoretical Background}
 To get a picture of how well the simulations of a microstrip in ADS are were the parameters of a microstrip analysed analytically to compare with. This was done by solving three basic problems.
 
 \subsubsection{Microstrip Parameters}\label{subsubsec: Microstrip_Parameters}
 The microstrip that was analysed was defined in problem 2.13 in [TODO: Ref to text book.] as
 `It is desired to construct a 50 $\Omega$ microstrip line. The relative dielectric constant is 2.23 and the board height is h = 787 $\mu \text{m.}$ Find the width, wavelength and effective dielectric constant when the thickness of the copper trace is negligible. Assume an operating frequency of 1 GHz.'
 
-By using that $Z_{f} = \sqrt{\mu_{0} \epsilon_{0}} = 376.8 \Omega$ together with the formula for the effective dielectric constant;
+\begin{table}\label{table: Lab1 Microstrip parameters}
+    \centering
+    \caption{Summary of microstrip parameters.}
+    \begin{tabular}{c | c | c | c | c | c | c}
+        $Z_{in} [\Omega]$ & $\epsilon_r $ & $h [\mu \text{m}]$ & $w [\text{mm}]$ & $\lambda [\text{mm}]$ & $\epsilon_{eff}$ & $f_0 [\text{GHz}]$\\
+        \hline
+         50 & 2.23 & 787 & ? & ? & ? & 1
+    \end{tabular}
+\end{table}
+
+By using that $Z_{f} = \sqrt{\mu_{0} \epsilon_{0}} = 376.8\:\Omega$ together with the formula for the effective dielectric constant;
 \begin{equation}
 	\epsilon_{eff} = \dfrac{\epsilon_{r} + 1}{2} + \dfrac{\epsilon_{r} - 1}{2} \left(1 + {\dfrac{12 h}{w}} \right)^{-1/2} \text ,
 \end{equation}
@@ -27,15 +37,15 @@ and the formula for wavelength
 \begin{equation}
 	\lambda = \dfrac{c}{f\sqrt{\epsilon_{eff}}}.
 \end{equation}
-This gives $w = 2.91 \text{mm}$, $\lambda = 229.51 \text{mm}$ and $\epsilon_{eff} = 1.71 \text{.}$
-\subsubsection{Transmission Line Phase hift}
+This gives $w = 2.4 \text{mm}$, $\lambda = 218 \text{mm}$ and $\epsilon_{eff} = 1.89 \text{.}$
+\subsubsection{Transmission Line Phase Shift}\label{subsubsec: Lab1 Phase Shift}
 When designing a microstrip that has a length that differs from the wavelength will a mismatch occur. So, what phase shift will occur if the microstrip given in \ref{subsubsec: Microstrip_Parameters} has a length of 15 cm?
 
 Since the wavelength is longer that the microstrip length will the phase shift be less than one period and therefore can the phase shift be calculated as
 \begin{equation}
 	\text{ps} = \dfrac{l}{\lambda} 360 \:^\circ
 \end{equation}
-and this gives ps = 235.3 $^\circ$.
+and this gives ps = 247.8 $^\circ$.
 \subsubsection{Reflection Coefficient and Standing Wave Ratio}
 Two other properties of a microstrip are the reflection coefficient, $\Gamma_0$ and the (voltage) standing wave ratio, (V)SWR. These two parameters are computed with
 \begin{equation}

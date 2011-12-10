@@ -1,6 +1,27 @@
 \documentclass[report.tex]{subfiles}
 \begin{document}
-\subsection{Experiment details}
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\subsection{Methodology}
+This section is divided into [TODO: HOWMANY?] parts where the fist part describes how to calculate the microstrip parameters used in REF and REF, the second part how to find the signal propagation delay, how to [TODO reflection and SWR and ], the third part [TODO rest.]
+\subsubsection{Microstrip Parameters}
+The microstrip defined in \ref{subsubsec: Microstrip_Parameters} was simulated in ADS by using the components MLIN and MSUB from the TLines-Microstrip library. The parameters given in \ref{table: Lab1 Microstrip parameters} and the phase shift given in \ref{subsubsec: Lab1 Phase Shift} was entered into the substrate component directly in the schematic and into the transmission line in the LineCalc utility. The conductivity was set to 5.8E7 to represent copper and the thickness of the microstrip was set to 18 $\mu$m. In LineCalc were the width, length and the effective dielectric constant calculated by using the Synthesize commando. The wavelength was calculated by setting the phase shift to 360 $^\circ$ and reading the length of the transmission line. In LineCalc is the phase shift denoted as E\_eff and the effective dielectric constant given as K\_Eff. The result of this operation is given in \ref{table: Lab1 Simulated Microstrip parameters}.
+
+\begin{table}[H]\label{table: Lab1 Simulated Microstrip parameters}
+    \centering
+    \caption{Simulated microstrip parameters.}
+    \begin{tabular}{c | c | c | c}
+        $w [\text{mm}]$ & $l [\text{mm}]$ & $\epsilon_{eff}$ & $\lambda [\text{mm}]$\\
+        \hline
+		2.38 & 149.83 & 1.89 ? & 217.7
+    \end{tabular}
+\end{table}
+
+\subsubsection{Signal Propagation Delay}
+The signal propagation delay is an important factor when working with RF networks. When doing operations on multiple signals, like mixing is it important that the signals are not delayed towards each others. To find the signal propagation delay in a transmission line is the following formula used
+\begin{equation}
+	\Delta t_p = \dfrac{l}{\nu_p}
+\end{equation}
+where l are the transmission line length and $\nu_p$ propagation speed.
+
+The propagation speed can be determined by analysing transmission lines with different lengths with the LinearStepRespT template in ADS. By measuring the time it takes for
 
 \end{document}

@@ -22,17 +22,17 @@ The new normalized values of the band-pass filter are calculated using eqs.~\ref
 
 \begin{equation}
     \label{eqn:first filter value}
-    L_1=\frac{g_1}{\omega_U-\omega_L} \approx 
+    L_1=\frac{g_1}{\omega_U-\omega_L} \approx 2.8~nH
 \end{equation}
 \begin{equation}
-    C_1=\frac{\omega_U-\omega_L}{\omega_0^2 g_1} \approx
+    C_1=\frac{\omega_U-\omega_L}{\omega_0^2 g_1} \approx 1.5~pF
 \end{equation}
 \begin{equation}
-    L_2=\frac{\omega_U-\omega_L}{\omega_0^2 g_2} \approx
+    L_2=\frac{\omega_U-\omega_L}{\omega_0^2 g_2} \approx 1.5~pH
 \end{equation}
 \begin{equation}
     \label{eqn:fourth filter value}
-    C_2=\frac{g_2}{\omega_U-\omega_L} \approx
+    C_2=\frac{g_2}{\omega_U-\omega_L} \approx 2.8~nF
 \end{equation}
 
 These normalized values can be de-normalized using eqn.~\ref{eqn:normalized inductance} and \ref{eqn:normalized capacitance} below
@@ -46,7 +46,7 @@ These normalized values can be de-normalized using eqn.~\ref{eqn:normalized indu
     \tilde{C_2}=\frac{C}{Z_0}
 \end{equation}
 
-The normalized component values of the band-pass filter are summarized in table~\ref{table:filter values} and the final lumped circuit together with simulation setup and result is shown in fig.~\ref{fig:Filter A circuit} and \ref{fig:Filter A S-params}
+The de-normalized component values of the band-pass filter are summarized in table~\ref{table:filter values} and the final lumped circuit together with simulation setup and result is shown in fig.~\ref{fig:Filter A circuit} and \ref{fig:Filter A S-params}
 
 \begin{table}[h]
     \centering

@@ -1,11 +1,11 @@
 \documentclass[report.tex]{subfiles}
 \begin{document}
 \subsection{Methodology}
-The RF filters discussed in this report can be divided in 3 sections
+The RF filters discussed in this report can be divided in 3 sections:
 \begin{itemize}
-    \item Lumped 2\nd order maximally flat band-pass filter
-    \item Distributed 2\nd order maximally flat band-pass filter on RO4350B or FR-4 substrate
-    \item Distributed maximally flat band-pass filter on FR-4 substrate (DesignGuide optimized filter order)
+    \item Lumped 2\nd order maximally flat band-pass filter.
+    \item Distributed 2\nd order maximally flat band-pass filter on RO4350B or FR-4 substrate.
+    \item Distributed maximally flat band-pass filter on FR-4 substrate (DesignGuide optimized filter order).
 \end{itemize}
 For each filter design, the attenuation at the pass- and stop-band limits (from table~\ref{table:filter specs}) was measured. A summary of measured attenuation is found in table~\ref{table:attenuation summary}.
 
@@ -23,7 +23,7 @@ From the DesignGuide \emph{Filter/Filter Control Window}, a double terminated ba
 \begin{figure}[H]
     \centering
     \includegraphics[scale=1.7]{design_guide_symbol}
-    \caption{Double terminated bandpass filter schematic symbol}
+    \caption{Double terminated bandpass filter schematic symbol.}
     \label{fig:Filter A}
 \end{figure}
 
@@ -40,7 +40,7 @@ From the DesignGuide \emph{Passive Circuit/Microstrip Control Window}, Microstri
         \includegraphics[width=0.4\linewidth]{filter_C_schematic}
         \label{fig:Filter C schematic}
     }
-    \caption{Microstrip Coupled-line filter with (a) RO4350B and (b) FR-4}
+    \caption{Microstrip Coupled-line filter with (a) RO4350B and (b) FR-4 stubstrate.}
 \end{figure}
 
 Pushing into hierarchy give the layout schematic shown in fig.~\ref{fig:Filter B layout schematic} (RO4350B), which will generate the microstrip layout shown in fig.~\ref{fig:Filter B layout}.
@@ -56,10 +56,10 @@ Pushing into hierarchy give the layout schematic shown in fig.~\ref{fig:Filter B
         \includegraphics[width=0.8\linewidth]{filter_B_layout}
         \label{fig:Filter B layout}
     }
-    \caption{Schematic and layout of microstrip Coupled-line filter (RO4350B)}
+    \caption{Schematic and layout of microstrip Coupled-line filter (RO4350B).}
 \end{figure}
 
-The schematic and layout in fig.~\ref{fig:Filter B layout schematic} and \ref{fig:Filter B layout} will be identical for FR-4
+The schematic and layout in fig.~\ref{fig:Filter B layout schematic} and \ref{fig:Filter B layout} will be identical for the filter on a FR-4 substrate.
 
 \subsubsection{Distributed 2\nd order maximally flat band-pass filter (FR-4)}
 By changing the filter order in fig~\ref{fig:Filter C schematic} from N=2 to N=0, DesignGuide will automatically try to determine the lowest order needed to meet the filter specifications. The resulting layout schematic and microstrip layout can be seen in fig.~\ref{fig:Filter C layout schematic auto-N} and \ref{fig:Filter C layout auto-N}.

@@ -7,11 +7,11 @@ This section is divided into four parts where the fist part describes how to cal
 The microstrip defined in \ref{subsubsec: Microstrip_Parameters} was simulated in ADS by using the components MLIN and MSUB from the TLines-Microstrip library. The parameters given in \ref{table: Lab1 Microstrip parameters} and the phase shift given in \ref{subsubsec: Lab1 Phase Shift} was entered into the substrate component and into the transmission line in the LineCalc utility. The conductivity was set to 5.8E7 to represent copper and the thickness of the microstrip was set to 18 $\mu$m. In LineCalc the width, length and the effective dielectric constant were calculated by using the Synthesize commando. The wavelength was calculated by setting the phase shift to 360~$^\circ$ and reading the length of the transmission line. In LineCalc, the phase shift is denoted as $E_{eff}$ and the effective dielectric constant is given as $K_{Eff}$.
 
 \subsubsection{Signal Propagation Delay}
-The signal propagation delay is an important factor when working with RF networks. When doing operations on multiple signals, e.g. mixing, it is important that the signals are not delayed with respect to eachother. To find the signal propagation delay in a transmission line the following formula is used
+The signal propagation delay is an important factor when working with RF networks. When doing operations on multiple signals, e.g. mixing, it is important that the signals are not delayed with respect to each other. To find the signal propagation delay in a transmission line the following formula is used
 \begin{equation}\label{eq: Lab1 propagation delay}
 	\Delta t_p = \dfrac{l}{\nu_p}
 \end{equation}
-where l are the transmission line length and $\nu_p$ propagation speed.
+where $l$ are the transmission line length and $\nu_p$ propagation speed.
 
 The propagation speed can be determined by analysing transmission lines with different lengths with the LinearStepRespT template in ADS. By measuring the time it takes for the wave to reach the end of the transmission line is it possible to calculate the propagation speed.
 
@@ -26,10 +26,10 @@ In this experiment the microstrip from section~\ref{subsubsec: Microstrip_Parame
 
 \begin{figure}[h]
 	\includegraphics[scale=0.8]{Step_response_setup}[H]
-	\caption{Setup to simulate reflection coefficient.}\label{fig:Lab1 reflection coefficient}
+	\caption{Set up to simulate reflection coefficient.}\label{fig:Lab1 reflection coefficient}
 \end{figure}
 
-The reflection constant can be simulated by terminating the transmission line with a resistor and analysing the results when sending a pulse with the LinearStepRespT template in ADS. How this looks can be seen in Fig.~\ref{fig:Lab1 reflection coefficient}. By varying the load, different reflection coefficient will be the result.
+The reflection constant can be simulated by terminating the transmission line with a resistor and analysing the results when sending a pulse with the LinearStepRespT template in ADS. The set up is depicted in Fig.~\ref{fig:Lab1 reflection coefficient}. By varying the load, different reflection coefficient will be the result.
 
 Loads with values 0, 25, 50, 100 and 1E6 $\Omega$ were tested.
 

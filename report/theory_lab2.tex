@@ -5,14 +5,14 @@
 
 Impedance matching can be achieved through analytical methods, but graphical methods prove to be most efficient; especially  with the help of Smith charts.
 
-An RF network ($f=1~GHz$) with a complex input impedance of $Z_{in}=(455-j227)~\Omega$, in a system with the characteristic impedance $Z_0=50 ~\Omega$ has the have a matching input network. To determine this matching network, the source load ($Z_0$) and the complex conjugate of the input impedance ($Z_{in}^*$) is normalized with respect to $Z_0$.
+An RF network ($f=1~\text{GHz}$) with a complex input impedance of $Z_{in}=(455-j227)~\Omega$, in a system with the characteristic impedance $Z_0=50 ~\Omega$ has the have a matching input network. To determine this matching network, the source load ($Z_0$) and the complex conjugate of the input impedance ($Z_{in}^*$) is normalized with respect to $Z_0$.
 
 \begin{equation*}
 %\label{eqn:z_in}
-    z_0=Z_0/Z_0 = 1~\Omega
+    z_0=Z_0/Z_0 = 1
 \end{equation*}
 \begin{equation*}
-    z_{in}^*=Z_{in}^*/Z_0=(9.1-4.54)~\Omega
+    z_{in}^*=Z_{in}^*/Z_0=(9.1-j4.54)
 \end{equation*}
 
 Then, by following the resistance and conductance lines of the Smith chart \emph{from} the normalized source load \emph{to} $z_{in}^*$, as shown in fig.~\ref{fig:input_matching_smith_chart}, the reactance of the matching network is determined by point A.
@@ -42,14 +42,14 @@ At point A in fig.~\ref{fig:input_matching_smith_chart}, $X_C=1/0.225=4.44~\Omeg
 
 \begin{equation*}
     X_C Z_0 = \frac{1}{\omega \tilde{C}} \implies
-    \tilde{C} = \frac{1}{\omega X_C Z_0} \approx 0.716 ~pF
+    \tilde{C} = \frac{1}{\omega X_C Z_0} \approx 0.716 ~\text{pF}
 \end{equation*}
 \begin{equation*}
     X_L Z_0=\omega \tilde{L} \implies 
-    \tilde{L}=\frac{X_L Z_0}{\omega} \approx 26.3~nH
+    \tilde{L}=\frac{X_L Z_0}{\omega} \approx 26.3~\text{nH}
 \end{equation*}
 
-Figure~\ref{fig:input_matching_network} show the resulting input matching network connected to a testbench ($701~fF$ corresponds to $-227~\Omega@1~GHz$). The S-parameter simulation in fig.~\ref{fig:fig:S-params_matching_network} show that for $f=1GHz$, the reflection coefficient is close to 0.
+Figure~\ref{fig:input_matching_network} show the resulting input matching network connected to a testbench ($701~\text{fF}$ corresponds to $-227~\Omega@1~\text{GHz}$). The S-parameter simulation in fig.~\ref{fig:fig:S-params_matching_network} show that for $f=1~\text{GHz}$, the reflection coefficient is close to 0.
 
 \begin{figure}
     \centering

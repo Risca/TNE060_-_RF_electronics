@@ -3,7 +3,11 @@
 \clearpage
 \subsection{Results}
 \label{sec:lab2_results}
-The simulation results for chapter \ref{sec:lab2} is summarized below
+The simulation results for chapter \ref{sec:lab2} are summarized in fig. \ref{fig:basic_components} and \ref{fig:npn_transistor} below.
+
+The resistor component show a strictly real result, the capacitor is plotted on the capacitive (bottommost) side of the Smith chart, and the inductor on the inductive (topmost) side.
+
+The un-matched NPN transistor display an input and output reflection coefficient that is far from the center of the smith charts, while the matching networks make sure that both the input and the output are very well matched for the target frequency.
 
 \vspace*{\fill}
 \begin{figure}[h]
@@ -18,6 +22,7 @@ The simulation results for chapter \ref{sec:lab2} is summarized below
         \includegraphics[scale=1.2]{S-params_3nH_coil}
     }
     \caption{Simulation results of three basic components}
+    \label{fig:basic_components}
 \end{figure}
 \vspace*{\fill}
 
@@ -46,6 +51,7 @@ The simulation results for chapter \ref{sec:lab2} is summarized below
         \includegraphics[width=0.5\linewidth]{S-params_matched_NPN}
     }
     \caption{S-parameters of an (a) un-matched and (b)matched NPN transistor}
+    \label{fig:npn_transistor}
 \end{figure}
 
 %\begin{figure}

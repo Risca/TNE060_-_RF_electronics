@@ -36,6 +36,9 @@
 \date{\today}
 
 \begin{document}
+
+
+\renewcommand\thepage{}
 \maketitle
 
 \vspace{\fill}
@@ -46,8 +49,11 @@ This report shows how signals propagate in RF networks, how improperly matched i
 It also gives an introduction on how to develop band-pass filters using both lumped components and distributed networks.
 \end{abstract}
 
-\pagebreak
+\newpage
 \tableofcontents
+\newpage
+\renewcommand\thepage{\arabic{page}}
+\setcounter{page}{1}
 
 \subfile{introduction}
 

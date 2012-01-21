@@ -11,13 +11,16 @@ The signal propagation delay is an important factor when working with RF network
 \begin{equation}\label{eq: Lab1 propagation delay}
 	\Delta t_p = \dfrac{l}{\nu_p}
 \end{equation}
-where $l$ are the transmission line length and $\nu_p$ propagation speed.
-
-The propagation speed can be determined by analysing transmission lines with different lengths with the LinearStepRespT template in ADS. By measuring the time it takes for the wave to reach the end of the transmission line is it possible to calculate the propagation speed.
+where $l$ are the transmission line length and $\nu_p$ phase velocity. The phase velocity can be computed with
+\begin{equation}\label{Lab1 eq: phase velocity}
+	\nu_p = \dfrac{c}{\sqrt{\epsilon_eff}}
+\end{equation}
+according to [1].
+The phase velocity can be determined by analysing transmission lines with different lengths with the LinearStepRespT template in ADS. By measuring the time it takes for the wave to reach the end of the transmission line is it possible to calculate the phase velocity.
 
 \begin{figure}[H]
 	\includegraphics[scale=0.8]{Step_response_setup_2}
-	\caption{Setup to measure the propagation speed.}
+	\caption{Setup to measure the phase velocity.}
 \end{figure}
 
 In this experiment the microstrip from section~\ref{subsubsec: Microstrip_Parameters} was used with the height and relative dielectric constant of the substrate set to 1 mm and 4 respectively, and then the microstrip parameters were resynthesized.

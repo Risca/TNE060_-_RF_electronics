@@ -6,7 +6,7 @@ To get a picture of how well the simulations of a microstrip in ADS are, the par
 \subsubsection{Microstrip Parameters}\label{subsubsec: Microstrip_Parameters}
 The microstrip that was analysed was defined in problem 2.13 in [1]:
 
-``It is desired to construct a 50 $\Omega$ microstrip line. The relative dielectric constant is 2.23 and the board height is h = 787 $\mu \text{m.}$ Find the width, wavelength and effective dielectric constant when the thickness of the copper trace is negligible. Assume an operating frequency of 1 GHz."
+``It is desired to construct a 50 $\Omega$ microstrip line. The relative dielectric constant, $\epsilon_r$, is 2.23 and the board height is h = 787 $\mu \text{m.}$ Find the width, wavelength and effective dielectric constant when the thickness of the copper trace is negligible. Assume an operating frequency of 1 GHz."
 
 \begin{table}[h]
     \centering
@@ -39,12 +39,12 @@ and the formula for wavelength
 \begin{equation}
 	\lambda = \dfrac{c}{f\sqrt{\epsilon_{eff}}}
 \end{equation}
-the sought parameters can be solved for. This gives $w = 2.4 \text{mm}$, $\lambda = 218 \text{mm}$ and $\epsilon_{eff} = 1.89 \text{.}$
+the sought parameters can be solved for. This gives $w = 2.4 \text{ mm}$, $\lambda = 218 \text{ mm}$ and $\epsilon_{eff} = 1.89 \text{.}$
 
 \subsubsection{Transmission Line Phase Shift}\label{subsubsec: Lab1 Phase Shift}
 When designing a microstrip that has a length that differs from the wavelength a mismatch will occur. So, what phase shift will occur if the microstrip given in \ref{subsubsec: Microstrip_Parameters} has a length of 15 cm?
 
-Since the wavelength is longer that the microstrip the phase shift will be less than one period and therefore can the phase shift be calculated as
+Since the wavelength is longer that the microstrip the phase shift, ps, will be less than one period and therefore can the phase shift be calculated as
 \begin{equation}
 	\text{ps} = \dfrac{l}{\lambda} 360 \:^\circ
 \end{equation}
@@ -55,7 +55,7 @@ Two other properties of a microstrip are the reflection coefficient, $\Gamma_0$ 
 	\Gamma_0 = \dfrac{Z_L - Z_0}{Z_L + Z_0}
 \end{equation}
 and
-\begin{equation}
+\begin{equation}\label{Lab1 eq: RC}
 	SWR = \dfrac{1 + \left|\Gamma_0\right|}{1 - \left|\Gamma_0\right|}
 \end{equation}
 

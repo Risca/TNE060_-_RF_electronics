@@ -18,7 +18,7 @@ The result of this experiment is given in Table \ref{table: Lab1 Simulated Micro
 
 \subsubsection{Signal Propagation Delay}\label{subsubsec:Lab 1 Signal propagation delay}
 
-The propagation speed given in Figure \ref{fig:Lab1 propagation speed} corresponds to 65 \% of the speed of light and the resulting formula for the signal propagation delay, rewritten from eq. \ref{eq: Lab1 propagation delay}, is given as
+The phase velocity given in Figure \ref{fig:Lab1 phase velocity} corresponds to 65 \% of the speed of light and the resulting formula for the signal propagation delay, rewritten from eq. \ref{eq: Lab1 propagation delay}, is given as
 
 \begin{equation}
 	\Delta t_p = \dfrac{100}{65 c}l.
@@ -29,9 +29,11 @@ The propagation speed given in Figure \ref{fig:Lab1 propagation speed} correspon
 \begin{figure}[h]
     \centering
 	\includegraphics[scale=0.9]{propagation_speed}
-	\caption{Propagation speed}
-	\label{fig:Lab1 propagation speed}
+	\caption{Phase velocity.}
+	\label{fig:Lab1 phase velocity}
 \end{figure}
+
+A dielectric constant of 4 and a substrate height of 1 mm, gives a phase velocity of 171E6 m/s when calculated with eq. \ref{Lab1 eq: phase velocity}.
 
 \vspace*{\fill}
 
@@ -54,11 +56,30 @@ The propagation speed given in Figure \ref{fig:Lab1 propagation speed} correspon
     \subfloat[$1\:\text{M}\Omega$]{
         \includegraphics[scale=0.65]{1000000}
     }
-	\caption{Voltage recorded at the output of reflection coefficient experiment.}
+	\caption{Voltage recorded at the output of reflection coefficient experiment with different terminations.}
 	\label{fig:Lab 1 Voltage recorded at the output.}
 \end{figure}
 
 The red lines in Figure \ref{fig:Lab 1 Voltage recorded at the output.} shows the incident wave and the blue lines depicts the voltage recorded at the output.
+
+\begin{table}[h]
+    \centering
+    \caption{Theoretical values of reflection coefficient, calculated with eq. \ref{Lab1 eq: RC}.}
+    \begin{tabular}{c | c | c | c | c | c}
+        $Z_{L} [\Omega]$ & 0 & 25 & 50 & 100 & $\infty$ \\
+        \hline
+         $\Gamma_0$ & $-1$ & $-\sfrac{1}{3}$ & 0 & $\sfrac{1}{3}$ & 1 \\
+         \hline
+         tdr & 0 & $\sfrac{10}{3}$ & 5 & $\sfrac{20}{3}$ & 10
+    \end{tabular}
+    \label{Lab 1 table: RC}
+\end{table}
+
+Tdr can theoretically be calculated with following equation 
+\begin{equation}
+ \text{tdr} =	{V_{in}} \left( 1 + \Gamma_0 \right)
+\end{equation}
+and the last row in Table \ref{Lab 1 table: RC} is the result of this calculation.
 
 \subsubsection{Transmission Line as Load}
 The following figure show how the output response relates to the termination.
